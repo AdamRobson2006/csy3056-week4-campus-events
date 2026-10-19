@@ -15,8 +15,7 @@ pipeline {
             steps { bat 'python scripts/build_release.py' }
         }
         stage('Archive Release') {
-            steps { bat 'python scripts/build_release.py' }
-            post { success {
+            steps { 
                 archiveArtifacts 
                     artifacts: 'dist/*.zip',
                     allowEmptyArchive: true,
@@ -26,4 +25,4 @@ pipeline {
                 }
         }
     }
-}
+
