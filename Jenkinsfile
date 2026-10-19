@@ -22,7 +22,7 @@ pipeline {
         stage('Archive Release') {
             steps {
                 archiveArtifacts(
-                    artifacts: 'dist/*.zip', build-info.txt
+                    artifacts: 'dist/*.zip', build-info.txt,
                     allowEmptyArchive: true,
                     fingerprint: true,
                     onlyIfSuccessful: true
