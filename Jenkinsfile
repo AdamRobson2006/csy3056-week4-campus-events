@@ -15,14 +15,16 @@ pipeline {
             steps { bat 'python scripts/build_release.py' }
         }
         stage('Archive Release') {
-            steps { 
-                archiveArtifacts 
+            steps {
+                archiveArtifacts(
                     artifacts: 'dist/*.zip',
                     allowEmptyArchive: true,
                     fingerprint: true,
                     onlyIfSuccessful: true
-                    }
-                }
+                )
+            }
+        }
+
         }
     }
 
