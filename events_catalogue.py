@@ -30,4 +30,14 @@ EVENTS = [
         'category': 'Technical',
         'description': 'Discuss how small web systems can be deployed and operated.',
     },
+        {
+        'id': 'test-event',
+        'title': 'New Event Test',
+        'date': '2026-10-19',
+        'time': '13:00',
+        'location': 'Waterside Campus, Room C109',
+        'capacity': 25,
+        'category': 'Technical',
+        'description': 'Test the website.',
+    }
 ]
